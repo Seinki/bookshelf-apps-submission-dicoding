@@ -1,0 +1,299 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+input,
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+input,
+button {
+  font-size: 16px;
+}
+
+.head_bar {
+  padding: 5px;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: cornflowerblue;
+  color: white;
+}
+
+.head_bar .search_section form button {
+  padding: 10px 2rem;
+}
+
+main {
+  max-width: 800px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 16px;
+  gap: 3rem;
+}
+
+main #title_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: cornflowerblue;
+  margin: 2rem;
+  font-weight: 800;
+}
+
+.input_section {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.input_section > h2 {
+  text-align: center;
+  color: cornflowerblue;
+}
+
+.input_section > form > .input {
+  margin: 8px 0;
+}
+
+.input_section > form > button {
+  background-color: cornflowerblue;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.input_section > form > button:hover {
+  background-color: rgb(77, 120, 201);
+  color: rgb(226, 226, 226);
+  transition: all 0.2s ease-in-out;
+}
+
+.input_section > form > button > span {
+  font-weight: bold;
+}
+
+.input_section > form > .input > input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.input_section > form > .input > label {
+  color: cornflowerblue;
+  font-weight: bold;
+}
+
+.input_section > form > .input_inline {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+}
+
+.input_section > form > .input_inline > label {
+  color: cornflowerblue;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.search_section {
+  margin: 16px 0;
+  display: flex;
+  align-items: center;
+}
+
+.search_section > h2 {
+  color: cornflowerblue;
+}
+
+.search_section > form {
+  padding: 16px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr 0.5fr;
+  grid-gap: 10px;
+}
+
+.search_section > form > label {
+  display: none;
+  align-items: center;
+}
+
+.search_section > form > input {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.search_section > form > button {
+  background-color: white;
+  color: black;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.search_section > form > button:hover {
+  background-color: rgb(225, 225, 225);
+  transition: all 0.2s ease-in-out;
+}
+
+.book_shelf {
+  margin: 16px 0 0 0;
+  border: 1px solid black;
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.book_shelf > h2 {
+  color: cornflowerblue;
+}
+
+.book_shelf > .book_list {
+  padding: 16px;
+}
+
+.book_shelf > .book_list > .book_item {
+  padding: 8px 16px 16px 16px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.book_shelf > .book_list > .book_item > h3,
+p {
+  margin: 8px 0;
+}
+
+.book_shelf > .book_list > .book_item > .action > button {
+  border: 0;
+  padding: 5px;
+  margin: 0 5px 0 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book_shelf > .book_list > .book_item > .action > .green {
+  background-color: green;
+  color: white;
+}
+
+.book_shelf > .book_list > .book_item > .action > .blue {
+  background-color: cornflowerblue;
+  color: white;
+  padding: 5px 1.5rem;
+}
+
+.book_shelf > .book_list > .book_item > .action > .red {
+  background-color: red;
+  color: white;
+}
+
+.book_shelf > .book_list > .book_item > .action > .green:hover {
+  background-color: darkgreen;
+  color: rgb(201, 201, 201);
+  transition: all 0.2s ease-in-out;
+}
+.book_shelf > .book_list > .book_item > .action > .blue:hover {
+  background-color: rgb(76, 111, 177);
+  color: rgb(201, 201, 201);
+  transition: all 0.2s ease-in-out;
+}
+.book_shelf > .book_list > .book_item > .action > .red:hover {
+  background-color: darkred;
+  color: rgb(201, 201, 201);
+  transition: all 0.2s ease-in-out;
+}
+
+#display-search-results {
+  display: none;
+  margin: 2rem 0rem;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#title_render_search {
+  display: none;
+  color: cornflowerblue;
+  margin: 1rem 1rem;
+}
+
+#searchResults {
+  display: none;
+  padding: 8px 16px 16px 16px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 2rem 2rem;
+}
+
+#searchResults article {
+  margin: 1rem 0rem;
+  border-bottom: 1px;
+}
+
+#searchResults > article > .action > button {
+  border: 0;
+  padding: 5px;
+  margin: 0 5px 0 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#searchResults > article > .action > .green {
+  background-color: green;
+  color: white;
+}
+#searchResults > article > .action > .blue {
+  background-color: cornflowerblue;
+  color: white;
+  padding: 5px 1.5rem;
+}
+#searchResults > article > .action > .red {
+  background-color: red;
+  color: white;
+}
+#searchResults > article > .action > .green:hover {
+  background-color: darkgreen;
+  color: rgb(201, 201, 201);
+  transition: all 0.2s ease-in-out;
+}
+#searchResults > article > .action > .blue:hover {
+  background-color: rgb(76, 111, 177);
+  color: rgb(201, 201, 201);
+  transition: all 0.2s ease-in-out;
+}
+#searchResults > article > .action > .red:hover {
+  background-color: darkred;
+  color: rgb(201, 201, 201);
+  transition: all 0.2s ease-in-out;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 1rem;
+  background-color: cornflowerblue;
+  color: white;
+}
+
+footer a {
+  font-weight: 700;
+  color: white;
+}
+footer a:hover {
+  color: rgb(225, 225, 225);
+  transition: all 0.2s ease-in-out;
+}
